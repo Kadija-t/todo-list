@@ -1,10 +1,7 @@
-
-
 const express = require('express');
 const cors = require('cors');
 const mysql = require('mysql2/promise');
 const bodyParser = require('body-parser');
-//require('dotenv').config({ path: '../vite-project/.env' });
 const Task = require('./models/Task')
 
 
@@ -119,10 +116,7 @@ app.use((error, req, res, next) => {
     res.status(500).json({ message: 'Erreur serveur interne' });
 });
 
-// // Démarrage du serveur
-// app.listen(PORT, () => {
-//     console.log(`Serveur démarré sur le port ${PORT}`);
-// });
+
 // Démarrage du serveur
 app.listen(5000, () => {
     console.log("Serveur démarré sur le port 5000");
